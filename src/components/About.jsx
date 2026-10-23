@@ -69,8 +69,9 @@ export default function About() {
             </p>
             <p className="about-narrative-paragraph">
               My engineering focus centers on developing reliable, end-to-end applications. Through hands-on
-              implementation, I have constructed production-ready systems using React, Vite.js, Node.js, and MongoDB
-              (such as <em>Workmate</em>), as well as Python and Django web services (such as the <em>AI Resume Analyzer</em>).
+              implementation, I have architected full-stack systems including GUVI Major Projects—<em>ApexMart</em> (e-commerce
+              platform built with Django REST Framework, MySQL, and React/Redux) and <em>ConnectX</em> (real-time social
+              network with MERN &amp; Socket.io)—as well as <em>Workmate</em> and the <em>AI Resume Analyzer</em>.
             </p>
             <p className="about-narrative-paragraph">
               I am seeking <strong>Python Developer</strong> and <strong>Full Stack Developer</strong> internship
@@ -81,15 +82,15 @@ export default function About() {
             <div className="about-pillars">
               <div className="pillar-item">
                 <span className="pillar-dot" />
-                <span className="pillar-text">Disciplined core programming in C, Java, and JavaScript</span>
+                <span className="pillar-text">Disciplined core programming in Python, C, and SQL</span>
               </div>
               <div className="pillar-item">
                 <span className="pillar-dot" />
-                <span className="pillar-text">Modern component-driven frontends with React &amp; Vite</span>
+                <span className="pillar-text">Modern component-driven frontends with JavaScript, React &amp; Vite</span>
               </div>
               <div className="pillar-item">
                 <span className="pillar-dot" />
-                <span className="pillar-text">Structured backend services with Django, Flask, and Node.js</span>
+                <span className="pillar-text">Structured backend services with Django, Node.js, and Express</span>
               </div>
             </div>
           </div>

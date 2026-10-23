@@ -22,11 +22,11 @@ export default function ExperienceTimeline() {
 
   const trainings = [
     {
-      program: 'MERN Stack Development',
+      program: 'Full Stack & MERN Development',
       provider: 'GUVI',
       status: 'Completed',
       statusType: 'success',
-      description: 'Comprehensive curriculum covering MongoDB, Express.js, React.js, and Node.js for modern web applications.',
+      description: 'Comprehensive curriculum covering full stack architectures, Python/Django, React, Node.js, and WebSockets; architected Major Project 1 (ApexMart) and Major Project 2 (ConnectX).',
     },
     {
       program: 'Java Full Stack Development',

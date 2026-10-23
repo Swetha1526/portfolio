@@ -21,7 +21,9 @@ Targeted for **Python Developer** and **Full Stack Developer** internships and e
   - Accessible mobile drawer with keyboard ESC listener and backdrop blur.
 - **Strictly Factual & Credible**:
   - **No invented proficiency percentages or fake badges**.
-  - **No fake repository links or pretend contact forms**.
+  - **Verified GitHub repositories**:
+    - [ApexMart](https://github.com/Swetha1526/ApexMarT) (GUVI Major Project 1 — Full-Stack E-Commerce)
+    - [ConnectX](https://github.com/Swetha1526/ConnectX) (GUVI Major Project 2 — Real-Time Social & Chat Platform)
   - Verified internship at **Inetz Technologies** and completed projects (**Workmate** & **AI Resume Analyzer**).
   - Interactive "View Technical Architecture" deep-dive accordions for recruiters.
   - One-click copy email button with clipboard state feedback & native mailto client integration.
@@ -46,6 +48,8 @@ swetha_portfolio/
 ├── public/
 │   ├── favicon.svg           # Custom branded SB monogram favicon
 │   └── projects/             # High-resolution project showcase mockups
+│       ├── apexmart.jpg      # GUVI Major Project 1 mockup
+│       ├── connectx.jpg      # GUVI Major Project 2 mockup
 │       ├── workmate.jpg
 │       └── resume_analyzer.jpg
 ├── src/
@@ -68,7 +72,7 @@ swetha_portfolio/
 │   │   ├── Navbar.css
 │   │   ├── ProjectCard.jsx   # Project showcase & architecture expander
 │   │   ├── ProjectCard.css
-│   │   ├── Projects.jsx      # Workmate & AI Resume Analyzer
+│   │   ├── Projects.jsx      # ApexMart, ConnectX, Workmate & AI Resume Analyzer
 │   │   ├── Projects.css
 │   │   ├── Skills.jsx        # Categorized tech inventory with filters
 │   │   ├── Skills.css

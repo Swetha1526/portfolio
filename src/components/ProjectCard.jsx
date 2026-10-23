@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Layers, CheckCircle2, ChevronDown, ChevronUp, Server, Info, ExternalLink } from 'lucide-react';
+import { GithubIcon } from './icons/SocialIcons';
 import './ProjectCard.css';
 
 export default function ProjectCard({ project }) {
@@ -27,9 +28,9 @@ export default function ProjectCard({ project }) {
         <div className="project-header">
           <div className="project-title-row">
             <h3 id={`project-title-${project.id}`} className="project-title">
-              {project.liveUrl ? (
+              {project.liveUrl || project.githubUrl ? (
                 <a
-                  href={project.liveUrl}
+                  href={project.liveUrl || project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="project-title-link"
@@ -41,12 +42,26 @@ export default function ProjectCard({ project }) {
                 project.title
               )}
             </h3>
-            {project.liveUrl && (
-              <span className="live-status-pill">
-                <span className="live-dot" />
-                <span>Live App</span>
-              </span>
-            )}
+            <div className="project-header-badges">
+              {project.liveUrl && (
+                <span className="live-status-pill">
+                  <span className="live-dot" />
+                  <span>Live App</span>
+                </span>
+              )}
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="github-status-pill"
+                  title="View GitHub Repository"
+                >
+                  <GithubIcon size={12} />
+                  <span>Source Code</span>
+                </a>
+              )}
+            </div>
           </div>
           <p className="project-tagline">{project.subtitle}</p>
         </div>
@@ -116,9 +131,33 @@ export default function ProjectCard({ project }) {
         <div className="project-footer">
           <div className="repo-status-notice">
             <span className="notice-dot" />
-            <span>{project.repoNotice}</span>
+            {project.githubUrl ? (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="repo-notice-link"
+                title="Open GitHub Repository"
+              >
+                {project.repoNotice}
+              </a>
+            ) : (
+              <span>{project.repoNotice}</span>
+            )}
           </div>
           <div className="project-btns-group">
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary project-github-btn"
+                aria-label={`Open GitHub repository for ${project.title} (opens in new tab)`}
+              >
+                <GithubIcon size={15} />
+                <span>GitHub Repo</span>
+              </a>
+            )}
             {project.liveUrl && (
               <a
                 href={project.liveUrl}
