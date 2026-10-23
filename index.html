@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Swetha B — Aspiring Python & Full Stack Developer</title>
+    <meta name="title" content="Swetha B — Aspiring Python & Full Stack Developer" />
+    <meta name="description" content="Portfolio of Swetha B, a final-year B.E. Computer Science & Engineering student graduating in 2027. Seeking Python & Full Stack Developer internships and entry-level opportunities." />
+    <meta name="keywords" content="Swetha B, Python Developer, Full Stack Developer, React, Django, Node.js, B.E. Computer Science, Portfolio" />
+    <meta name="author" content="Swetha B" />
+    <meta name="theme-color" content="#0B0F19" id="theme-color-meta" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://swetha-portfolio.vercel.app/" />
+    <meta property="og:title" content="Swetha B — Aspiring Python & Full Stack Developer" />
+    <meta property="og:description" content="Final-year B.E. Computer Science student at Asan Memorial College. Skilled in Python, Django, React, Node.js, and modern databases." />
+    <meta property="og:image" content="/projects/workmate.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Swetha B — Aspiring Python & Full Stack Developer" />
+    <meta property="twitter:description" content="Final-year B.E. Computer Science student at Asan Memorial College. Skilled in Python, Django, React, Node.js, and modern databases." />
+    <meta property="twitter:image" content="/projects/workmate.jpg" />
+
+    <!-- Google Fonts Preconnect & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Anti-FOUC Theme Initialization Script -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('swetha_portfolio_theme');
+          var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = stored ? stored : (systemDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', theme);
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+          var metaTheme = document.getElementById('theme-color-meta');
+          if (metaTheme) {
+            metaTheme.setAttribute('content', theme === 'dark' ? '#0B0F19' : '#F8F9FC');
+          }
+        } catch (e) {
+          console.error(e);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
