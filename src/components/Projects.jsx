@@ -9,7 +9,7 @@ const PROJECTS_DATA = [
     title: 'ApexMart',
     subtitle: 'Production Full-Stack E-Commerce Platform',
     status: 'Completed',
-    projectType: 'GUVI Major Project 1',
+    projectType: 'Major Project 1',
     image: '/projects/apexmart.jpg',
     purpose:
       'A high-performance full-stack e-commerce web platform engineered with Django REST Framework and React/Redux. Features JWT authentication, catalog search/filtering, persistent shopping cart, multi-step checkout with simulated payments, order lifecycle tracking with invoices, and comprehensive administrator analytics with product/order CRUD.',
@@ -31,7 +31,7 @@ const PROJECTS_DATA = [
     title: 'ConnectX',
     subtitle: 'Real-Time Social Media & Direct Messaging Platform',
     status: 'Completed',
-    projectType: 'GUVI Major Project 2',
+    projectType: 'Major Project 2',
     image: '/projects/connectx.jpg',
     purpose:
       'A full-stack real-time social media platform designed for seamless user interaction, combining dynamic media-sharing feeds, optimistic like/comment engagements, user profiles, and low-latency duplex 1-on-1 messaging with live typing indicators and online presence tracking.',
@@ -54,7 +54,7 @@ const PROJECTS_DATA = [
     title: 'Workmate',
     subtitle: 'Hourly Worker Hiring Platform',
     status: 'Completed',
-    projectType: 'Individual Project',
+    projectType: 'Major Project 3',
     image: '/projects/workmate.jpg',
     purpose:
       'A full stack platform designed to help people hire hourly workers in their region, including plumbers, fitters, electricians, and helpers with transparent skill categorization and local discovery.',
@@ -67,30 +67,9 @@ const PROJECTS_DATA = [
     ],
     stackRole:
       'Client built with React & Vite for responsive performance; Node.js handles data operations with MongoDB for worker schemas.',
-    note: 'Individual full stack capstone project demonstrating end-to-end web architecture.',
+    note: 'Major Project 3 demonstrating comprehensive end-to-end full stack web architecture.',
     liveUrl: 'https://workmate-brown.vercel.app/',
     repoNotice: 'Live on Vercel: workmate-brown.vercel.app',
-  },
-  {
-    id: 'ai-resume-analyzer',
-    title: 'AI Resume Analyzer',
-    subtitle: 'Intelligent Resume Evaluation & ATS Matcher',
-    status: 'Completed',
-    projectType: 'Individual Project',
-    image: '/projects/resume_analyzer.jpg',
-    purpose:
-      'An application that analyzes resumes, evaluates their alignment against job requirements, provides a structured ATS compatibility score, and suggests actionable content and formatting improvements.',
-    technologies: ['Python', 'Django', 'React.js'],
-    keyFeatures: [
-      'Resume content parsing and text extraction',
-      'Automated ATS scoring algorithm assessing keyword relevance',
-      'Identification of missing critical competencies and skill gap recommendations',
-      'Clean interactive dashboard built with React.js powered by Django APIs',
-    ],
-    stackRole:
-      'Python and Django handle text parsing logic and scoring algorithms; React provides the user-facing report dashboard.',
-    note: 'Developed during Python Full Stack Internship at Inetz Technologies.',
-    repoNotice: 'Repository: Code available upon request',
   },
 ];
 

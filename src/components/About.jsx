@@ -69,9 +69,9 @@ export default function About() {
             </p>
             <p className="about-narrative-paragraph">
               My engineering focus centers on developing reliable, end-to-end applications. Through hands-on
-              implementation, I have architected full-stack systems including GUVI Major Projects—<em>ApexMart</em> (e-commerce
-              platform built with Django REST Framework, MySQL, and React/Redux) and <em>ConnectX</em> (real-time social
-              network with MERN &amp; Socket.io)—as well as <em>Workmate</em> and the <em>AI Resume Analyzer</em>.
+              implementation, I have architected full-stack systems including Major Projects—<em>ApexMart</em> (e-commerce
+              platform built with Django REST Framework, MySQL, and React/Redux), <em>ConnectX</em> (real-time social
+              network with MERN &amp; Socket.io), and <em>Workmate</em> (hourly worker hiring platform built with React, Node.js, and MongoDB).
             </p>
             <p className="about-narrative-paragraph">
               I am seeking <strong>Python Developer</strong> and <strong>Full Stack Developer</strong> internship
