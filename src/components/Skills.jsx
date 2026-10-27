@@ -35,8 +35,8 @@ const SKILL_CATEGORIES = [
     id: 'tools',
     title: 'Developer Tools & Version Control',
     icon: <Wrench size={20} />,
-    description: 'Distributed version control workflows, API testing environments, sprint tracking, and cloud deployment.',
-    skills: ['Git (Version Control)', 'GitHub', 'Postman (API Testing)', 'Jira (Agile/Sprint Tracking)', 'VS Code', 'Vercel', 'Render'],
+    description: 'Distributed version control workflows, API testing environments, and cloud deployment platforms.',
+    skills: ['Git (Version Control)', 'GitHub', 'Postman (API Testing)', 'VS Code', 'Vercel', 'Render'],
   },
   {
     id: 'soft-skills',

@@ -23,7 +23,6 @@ const PROJECTS_DATA = [
     stackRole:
       'Django 5 and Django REST Framework backend with PyMySQL relational database; React and Redux client for high-performance stateful shopping workflows.',
     note: 'GUVI Major Project 1 demonstrating full stack enterprise e-commerce architecture.',
-    liveUrl: 'https://apexmart-ecommerce.vercel.app',
     githubUrl: 'https://github.com/Swetha1526/ApexMarT',
     repoNotice: 'GitHub: Swetha1526/ApexMarT',
   },
@@ -47,7 +46,6 @@ const PROJECTS_DATA = [
     stackRole:
       'Node.js & Express REST API with Socket.io duplex engine & MongoDB; React 18 client for responsive navigation and synchronized states.',
     note: 'GUVI Major Project 2 showcasing full-stack real-time MERN architecture with WebSockets.',
-    liveUrl: 'https://connectx-social.vercel.app',
     githubUrl: 'https://github.com/Swetha1526/ConnectX',
     repoNotice: 'GitHub: Swetha1526/ConnectX',
   },

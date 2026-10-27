@@ -22,12 +22,12 @@ Targeted for **MERN Stack Developer** and **Full Stack Developer** internships a
 - **Strictly Factual & Credible**:
   - **No invented proficiency percentages or fake badges**.
   - **Comprehensive ATS-Friendly Resume PDF**: Directly accessible and downloadable via navigation bar, hero actions, about section, contact grid, and footer.
-  - **Verified Major Projects with Live Demos & GitHub Links**:
-    - [ConnectX](https://connectx-social.vercel.app) ([GitHub Repo](https://github.com/Swetha1526/ConnectX)) — Major Project 2: Real-time MERN social media & WebSocket direct chat platform.
-    - [ApexMart](https://apexmart-ecommerce.vercel.app) ([GitHub Repo](https://github.com/Swetha1526/ApexMarT)) — Major Project 1: Production full-stack e-commerce with Django REST Framework, MySQL, and React/Redux.
+  - **Verified Major Projects & Source Repositories**:
+    - [ApexMart](https://github.com/Swetha1526/ApexMarT) — Major Project 1: Production full-stack e-commerce with Django REST Framework, MySQL, and React/Redux.
+    - [ConnectX](https://github.com/Swetha1526/ConnectX) — Major Project 2: Real-time MERN social media & WebSocket direct chat platform.
     - [Workmate](https://workmate-brown.vercel.app/) ([GitHub Repo](https://github.com/Swetha1526/workmate)) — Major Project 3: Regional hourly worker hiring platform with React, Vite, Node.js, and MongoDB.
   - **Quantified Internship Impact**: Verified Python Full Stack internship at **Inetz Technologies** delivering the AI Resume Analyzer with measured outcomes (65% evaluation time saved, 40% ATS match boost, <500ms API response latency).
-  - **Comprehensive Skills & Competencies**: Explicit categorization of Programming, Frontend, Backend, Databases, Developer Tools (Git, GitHub, Postman, Jira), and Soft Skills (Agile, Problem Solving, Communication).
+  - **Comprehensive Skills & Competencies**: Explicit categorization of Programming, Frontend, Backend, Databases, Developer Tools (Git, GitHub, Postman), and Soft Skills (Agile, Problem Solving, Communication).
   - **Interactive Developer Showcase**: Real-time syntax-highlighted MERN profile terminal card and architectural breakdown accordions for recruiters.
 
 ---
