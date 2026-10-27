@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, MapPin, Calendar, Award, Languages, BookOpen, UserCheck } from 'lucide-react';
+import { GraduationCap, MapPin, Calendar, Award, Languages, BookOpen, UserCheck, FileText } from 'lucide-react';
 import './About.css';
 
 export default function About() {
@@ -8,7 +8,7 @@ export default function About() {
       icon: <GraduationCap size={22} className="about-fact-icon" />,
       label: 'Degree & Branch',
       value: 'B.E. Computer Science & Engineering',
-      subtext: 'Final Year Student',
+      subtext: 'Final Year Student (2023–2027)',
     },
     {
       icon: <BookOpen size={22} className="about-fact-icon" />,
@@ -20,12 +20,12 @@ export default function About() {
       icon: <Award size={22} className="about-fact-icon" />,
       label: 'Academic Performance',
       value: '7.88 / 10 CGPA',
-      subtext: 'Consistent academic standing',
+      subtext: 'Strong algorithmic foundation',
     },
     {
       icon: <Calendar size={22} className="about-fact-icon" />,
       label: 'Expected Graduation',
-      value: '2027',
+      value: 'May 2027',
       subtext: 'Available for immediate internship',
     },
     {
@@ -51,9 +51,9 @@ export default function About() {
             <UserCheck size={14} />
             <span>Profile &amp; Background</span>
           </div>
-          <h2 className="section-title">Bridging Theory &amp; Practical Web Engineering</h2>
+          <h2 className="section-title">Architecting Scalable MERN &amp; Full-Stack Solutions</h2>
           <p className="section-subtitle">
-            A dedicated computer science student focused on full stack development and Python engineering.
+            A dedicated computer science engineer specializing in MERN stack architectures, modern React interfaces, and robust backend web services.
           </p>
         </div>
 
@@ -64,34 +64,55 @@ export default function About() {
             <p className="about-narrative-paragraph">
               I am a final-year Bachelor of Engineering student specializing in Computer Science and Engineering
               at Asan Memorial College of Engineering and Technology, graduating in 2027. My coursework and
-              hands-on projects have built a disciplined foundation in core computer science—including data
-              structures, relational database modeling, and scalable web architecture.
+              hands-on engineering have built a disciplined foundation in core computer science—spanning data
+              structures, relational and document database modeling, and scalable web architecture.
             </p>
             <p className="about-narrative-paragraph">
-              My engineering focus centers on developing reliable, end-to-end applications. Through hands-on
-              implementation, I have architected full-stack systems including Major Projects—<em>ApexMart</em> (e-commerce
-              platform built with Django REST Framework, MySQL, and React/Redux), <em>ConnectX</em> (real-time social
-              network with MERN &amp; Socket.io), and <em>Workmate</em> (hourly worker hiring platform built with React, Node.js, and MongoDB).
+              My technical expertise is centered on <strong>MERN Stack Development</strong> (MongoDB, Express.js, React, Node.js)
+              alongside Python and Django. I have architected and deployed three production-scale major projects:
+              <em>ConnectX</em> (real-time MERN social platform featuring low-latency duplex messaging with Socket.io),
+              <em>ApexMart</em> (enterprise e-commerce system with React/Redux and Django REST Framework), and
+              <em>Workmate</em> (regional worker discovery marketplace built with React, Node.js, and MongoDB).
             </p>
             <p className="about-narrative-paragraph">
-              I am seeking <strong>Python Developer</strong> and <strong>Full Stack Developer</strong> internship
-              and entry-level opportunities where I can apply my development skills, collaborate with experienced
-              engineers, and contribute to production codebases.
+              During my internship at <strong>Inetz Technologies</strong>, I built an automated AI Resume Analyzer,
+              reducing manual candidate screening duration by <strong>65%</strong> and achieving sub-500ms parser latency.
+              I am actively seeking <strong>MERN Stack Developer</strong> and <strong>Full Stack Developer</strong> internship
+              and entry-level opportunities to engineer impactful, production-grade applications.
             </p>
 
             <div className="about-pillars">
               <div className="pillar-item">
                 <span className="pillar-dot" />
-                <span className="pillar-text">Disciplined core programming in Python, C, and SQL</span>
+                <span className="pillar-text">Proficient MERN stack engineering with MongoDB, Express.js, React 18, and Node.js</span>
               </div>
               <div className="pillar-item">
                 <span className="pillar-dot" />
-                <span className="pillar-text">Modern component-driven frontends with JavaScript, React &amp; Vite</span>
+                <span className="pillar-text">Duplex real-time WebSockets (Socket.io) and RESTful API architecture</span>
               </div>
               <div className="pillar-item">
                 <span className="pillar-dot" />
-                <span className="pillar-text">Structured backend services with Django, Node.js, and Express</span>
+                <span className="pillar-text">Structured backend services with Python, Django REST Framework, and SQL databases</span>
               </div>
+              <div className="pillar-item">
+                <span className="pillar-dot" />
+                <span className="pillar-text">Disciplined version control workflows using Git &amp; GitHub with agile collaboration</span>
+              </div>
+            </div>
+
+            {/* Resume Callout Action */}
+            <div className="about-resume-cta">
+              <a
+                href="/B_Swetha_resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary about-resume-btn"
+                aria-label="View and download Swetha's Comprehensive Resume PDF (opens in new tab)"
+                title="View & Download Resume PDF"
+              >
+                <FileText size={18} />
+                <span>View Comprehensive Resume (PDF)</span>
+              </a>
             </div>
           </div>
 

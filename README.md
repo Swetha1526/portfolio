@@ -2,7 +2,7 @@
 
 Production-ready, premium personal portfolio website for **Swetha B**, a final-year B.E. Computer Science and Engineering student graduating in 2027 from Asan Memorial College of Engineering and Technology (Chengalpattu, Tamil Nadu).
 
-Targeted for **Python Developer** and **Full Stack Developer** internships and entry-level engineering roles.
+Targeted for **MERN Stack Developer** and **Full Stack Developer** internships and entry-level engineering roles.
 
 ---
 
@@ -21,13 +21,14 @@ Targeted for **Python Developer** and **Full Stack Developer** internships and e
   - Accessible mobile drawer with keyboard ESC listener and backdrop blur.
 - **Strictly Factual & Credible**:
   - **No invented proficiency percentages or fake badges**.
-  - **Verified Major Projects & Repositories**:
-    - [ApexMart](https://github.com/Swetha1526/ApexMarT) (Major Project 1 — Full-Stack E-Commerce)
-    - [ConnectX](https://github.com/Swetha1526/ConnectX) (Major Project 2 — Real-Time Social & Chat Platform)
-    - [Workmate](https://workmate-brown.vercel.app/) (Major Project 3 — Hourly Worker Hiring Platform)
-  - Verified internship at **Inetz Technologies**.
-  - Interactive "View Technical Architecture" deep-dive accordions for recruiters.
-  - One-click copy email button with clipboard state feedback & native mailto client integration.
+  - **Comprehensive ATS-Friendly Resume PDF**: Directly accessible and downloadable via navigation bar, hero actions, about section, contact grid, and footer.
+  - **Verified Major Projects with Live Demos & GitHub Links**:
+    - [ConnectX](https://connectx-social.vercel.app) ([GitHub Repo](https://github.com/Swetha1526/ConnectX)) — Major Project 2: Real-time MERN social media & WebSocket direct chat platform.
+    - [ApexMart](https://apexmart-ecommerce.vercel.app) ([GitHub Repo](https://github.com/Swetha1526/ApexMarT)) — Major Project 1: Production full-stack e-commerce with Django REST Framework, MySQL, and React/Redux.
+    - [Workmate](https://workmate-brown.vercel.app/) ([GitHub Repo](https://github.com/Swetha1526/workmate)) — Major Project 3: Regional hourly worker hiring platform with React, Vite, Node.js, and MongoDB.
+  - **Quantified Internship Impact**: Verified Python Full Stack internship at **Inetz Technologies** delivering the AI Resume Analyzer with measured outcomes (65% evaluation time saved, 40% ATS match boost, <500ms API response latency).
+  - **Comprehensive Skills & Competencies**: Explicit categorization of Programming, Frontend, Backend, Databases, Developer Tools (Git, GitHub, Postman, Jira), and Soft Skills (Agile, Problem Solving, Communication).
+  - **Interactive Developer Showcase**: Real-time syntax-highlighted MERN profile terminal card and architectural breakdown accordions for recruiters.
 
 ---
 
@@ -48,34 +49,35 @@ swetha_portfolio/
 ├── dist/                     # Optimized static production build output
 ├── public/
 │   ├── favicon.svg           # Custom branded SB monogram favicon
+│   ├── B_Swetha_resume.pdf   # Prepared professional resume PDF
 │   └── projects/             # High-resolution project showcase mockups
 │       ├── apexmart.jpg      # GUVI Major Project 1 mockup
 │       ├── connectx.jpg      # GUVI Major Project 2 mockup
-│       ├── workmate.jpg
+│       ├── workmate.jpg      # Major Project 3 mockup
 │       └── resume_analyzer.jpg
 ├── src/
 │   ├── assets/               # Brand assets
 │   ├── components/
 │   │   ├── icons/            # SVG icons (GitHub, LinkedIn)
-│   │   ├── About.jsx         # Academic background & narrative
+│   │   ├── About.jsx         # Academic background, MERN focus & resume link
 │   │   ├── About.css
-│   │   ├── Contact.jsx       # Real email copy & profile links
+│   │   ├── Contact.jsx       # Email copy, profile links & resume card
 │   │   ├── Contact.css
 │   │   ├── Education.jsx     # B.E. CSE degree, CGPA, & coursework
 │   │   ├── Education.css
-│   │   ├── ExperienceTimeline.jsx # Inetz Technologies & GUVI/QSpiders
+│   │   ├── ExperienceTimeline.jsx # Quantified internship impact & training
 │   │   ├── ExperienceTimeline.css
-│   │   ├── Footer.jsx        # Dynamic year & back-to-top button
+│   │   ├── Footer.jsx        # Dynamic year, back-to-top & resume link
 │   │   ├── Footer.css
-│   │   ├── Hero.jsx          # Live availability beacon & developer card
+│   │   ├── Hero.jsx          # Live availability beacon, MERN headline & terminal card
 │   │   ├── Hero.css
-│   │   ├── Navbar.jsx        # Desktop nav & mobile drawer
+│   │   ├── Navbar.jsx        # Desktop nav, mobile drawer & resume action
 │   │   ├── Navbar.css
 │   │   ├── ProjectCard.jsx   # Project showcase & architecture expander
 │   │   ├── ProjectCard.css
 │   │   ├── Projects.jsx      # Major Projects: ApexMart, ConnectX & Workmate
 │   │   ├── Projects.css
-│   │   ├── Skills.jsx        # Categorized tech inventory with filters
+│   │   ├── Skills.jsx        # Categorized tech inventory with filters & soft skills
 │   │   ├── Skills.css
 │   │   ├── ThemeToggle.jsx   # Accessible dark/light toggle button
 │   │   └── ThemeToggle.css

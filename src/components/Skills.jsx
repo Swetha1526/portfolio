@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Code, Layout, Server, Database, Wrench, Layers } from 'lucide-react';
+import { Code, Layout, Server, Database, Wrench, Layers, Users } from 'lucide-react';
 import './Skills.css';
 
 const SKILL_CATEGORIES = [
@@ -8,35 +8,50 @@ const SKILL_CATEGORIES = [
     title: 'Programming Languages',
     icon: <Code size={20} />,
     description: 'Core languages utilized for algorithmic problem solving, backend engineering, data querying, and scripting.',
-    skills: ['Python', 'C', 'SQL'],
+    skills: ['Python', 'JavaScript (ES6+)', 'SQL', 'C'],
   },
   {
     id: 'frontend',
-    title: 'Frontend Development',
+    title: 'Frontend & UI Engineering',
     icon: <Layout size={20} />,
-    description: 'Component architecture, semantic markup, responsive design, JavaScript programming, and modern client tooling.',
-    skills: ['JavaScript', 'React.js', 'HTML', 'CSS', 'Vite.js'],
+    description: 'Component architecture, reactive state management, modern styling, and client-side tooling.',
+    skills: ['React.js (v18/19)', 'JavaScript', 'Redux / Redux Toolkit', 'HTML5', 'CSS3', 'Tailwind CSS', 'Vite.js'],
   },
   {
     id: 'backend',
-    title: 'Backend Frameworks',
+    title: 'Backend & APIs (MERN & Python)',
     icon: <Server size={20} />,
-    description: 'Server-side application logic, RESTful API design, routing, and controller architectures.',
-    skills: ['Django', 'Flask', 'Node.js'],
+    description: 'Scalable RESTful API development, real-time WebSocket communication, authentication, and MVC architecture.',
+    skills: ['Node.js', 'Express.js', 'Django REST Framework', 'Django', 'Socket.io (WebSockets)', 'JWT Auth', 'Flask'],
   },
   {
     id: 'databases',
-    title: 'Databases & Storage',
+    title: 'Databases & Data Modeling',
     icon: <Database size={20} />,
-    description: 'Relational schema design, queries, and document-oriented data persistence.',
-    skills: ['MySQL', 'SQLite', 'MongoDB'],
+    description: 'Document-oriented NoSQL storage, schema validation, and normalized relational databases.',
+    skills: ['MongoDB (Mongoose)', 'MySQL', 'SQLite', 'Database Design'],
   },
   {
     id: 'tools',
-    title: 'Developer Tools',
+    title: 'Developer Tools & Version Control',
     icon: <Wrench size={20} />,
-    description: 'Version control workflows, repository hosting, and code editing environments.',
-    skills: ['Git', 'GitHub', 'Visual Studio Code'],
+    description: 'Distributed version control workflows, API testing environments, sprint tracking, and cloud deployment.',
+    skills: ['Git (Version Control)', 'GitHub', 'Postman (API Testing)', 'Jira (Agile/Sprint Tracking)', 'VS Code', 'Vercel', 'Render'],
+  },
+  {
+    id: 'soft-skills',
+    title: 'Soft Skills & Professional Strengths',
+    icon: <Users size={20} />,
+    description: 'Core professional interpersonal traits, agile collaboration methods, problem solving, and effective engineering communication.',
+    skills: [
+      'Problem Solving & Algorithmic Thinking',
+      'Team Collaboration',
+      'Agile & Scrum Methodologies',
+      'Technical Communication',
+      'Code Review & Best Practices',
+      'Time Management & Sprint Delivery',
+      'Adaptability & Rapid Learning',
+    ],
   },
 ];
 
@@ -44,12 +59,13 @@ export default function Skills() {
   const [activeFilter, setActiveFilter] = useState('all');
 
   const filterOptions = [
-    { id: 'all', label: 'All Technologies' },
+    { id: 'all', label: 'All Capabilities' },
     { id: 'programming', label: 'Programming' },
     { id: 'frontend', label: 'Frontend' },
     { id: 'backend', label: 'Backend' },
     { id: 'databases', label: 'Databases' },
-    { id: 'tools', label: 'Tools' },
+    { id: 'tools', label: 'Tools & Version Control' },
+    { id: 'soft-skills', label: 'Soft Skills' },
   ];
 
   const filteredCategories = activeFilter === 'all'
@@ -67,7 +83,7 @@ export default function Skills() {
           </div>
           <h2 className="section-title">Core Skills &amp; Technologies</h2>
           <p className="section-subtitle">
-            A verified inventory of technologies utilized in coursework, internships, and full stack projects.
+            A verified inventory of technologies, frameworks, developer tools, and professional strengths utilized in coursework, internships, and production projects.
           </p>
         </div>
 
@@ -95,7 +111,7 @@ export default function Skills() {
                 <div className="cat-icon-badge">{cat.icon}</div>
                 <div>
                   <h3 className="cat-title">{cat.title}</h3>
-                  <span className="cat-count">{cat.skills.length} technologies</span>
+                  <span className="cat-count">{cat.skills.length} skills &amp; competencies</span>
                 </div>
               </div>
 

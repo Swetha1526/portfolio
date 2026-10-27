@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, MapPin, Languages, Copy, Check, Send, ArrowUpRight, MessageSquare } from 'lucide-react';
+import { Mail, MapPin, Languages, Copy, Check, Send, ArrowUpRight, MessageSquare, FileText } from 'lucide-react';
 import { LinkedinIcon, GithubIcon } from './icons/SocialIcons';
 import './Contact.css';
 
@@ -42,7 +42,7 @@ export default function Contact() {
           </div>
           <h2 className="section-title">Let&apos;s Connect &amp; Collaborate</h2>
           <p className="section-subtitle">
-            Open for Python Developer &amp; Full Stack Developer internships and entry-level positions.
+            Open for MERN Stack Developer &amp; Full Stack Software Engineer internships and entry-level positions.
           </p>
         </div>
 
@@ -52,7 +52,7 @@ export default function Contact() {
               <h3 className="contact-callout-title">Direct Inquiries Welcome</h3>
               <p className="contact-callout-desc">
                 Whether you have an internship opportunity, an entry-level software role, or want to discuss
-                full stack development, feel free to reach out directly via email or LinkedIn.
+                MERN stack architecture and full stack development, feel free to reach out directly via email or LinkedIn.
               </p>
             </div>
 
@@ -138,6 +138,24 @@ export default function Contact() {
                 <ArrowUpRight size={18} className="channel-arrow" />
               </a>
 
+              {/* Resume Download */}
+              <a
+                href="/B_Swetha_resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="channel-card"
+                aria-label="Swetha's Professional Resume PDF (opens in new tab)"
+              >
+                <div className="channel-icon-wrap resume-card-icon">
+                  <FileText size={22} />
+                </div>
+                <div className="channel-info">
+                  <span className="channel-title">Professional Resume</span>
+                  <span className="channel-subtitle">View &amp; download PDF</span>
+                </div>
+                <ArrowUpRight size={18} className="channel-arrow" />
+              </a>
+
               {/* Portfolio Repository */}
               <a
                 href="https://github.com/Swetha1526/portfolio"
@@ -165,7 +183,7 @@ export default function Contact() {
               </div>
               <div className="meta-badge">
                 <Languages size={15} />
-                <span>Fluent in Tamil &amp; English</span>
+                <span>Tamil &amp; English</span>
               </div>
             </div>
           </div>

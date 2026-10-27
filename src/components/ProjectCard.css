@@ -298,6 +298,14 @@
   font-size: 0.6875rem;
   font-weight: 600;
   white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.live-status-pill:hover {
+  filter: brightness(1.15);
+  transform: translateY(-1px);
 }
 
 .live-dot {

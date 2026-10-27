@@ -23,6 +23,7 @@ const PROJECTS_DATA = [
     stackRole:
       'Django 5 and Django REST Framework backend with PyMySQL relational database; React and Redux client for high-performance stateful shopping workflows.',
     note: 'GUVI Major Project 1 demonstrating full stack enterprise e-commerce architecture.',
+    liveUrl: 'https://apexmart-ecommerce.vercel.app',
     githubUrl: 'https://github.com/Swetha1526/ApexMarT',
     repoNotice: 'GitHub: Swetha1526/ApexMarT',
   },
@@ -46,6 +47,7 @@ const PROJECTS_DATA = [
     stackRole:
       'Node.js & Express REST API with Socket.io duplex engine & MongoDB; React 18 client for responsive navigation and synchronized states.',
     note: 'GUVI Major Project 2 showcasing full-stack real-time MERN architecture with WebSockets.',
+    liveUrl: 'https://connectx-social.vercel.app',
     githubUrl: 'https://github.com/Swetha1526/ConnectX',
     repoNotice: 'GitHub: Swetha1526/ConnectX',
   },
@@ -69,7 +71,8 @@ const PROJECTS_DATA = [
       'Client built with React & Vite for responsive performance; Node.js handles data operations with MongoDB for worker schemas.',
     note: 'Major Project 3 demonstrating comprehensive end-to-end full stack web architecture.',
     liveUrl: 'https://workmate-brown.vercel.app/',
-    repoNotice: 'Live on Vercel: workmate-brown.vercel.app',
+    githubUrl: 'https://github.com/Swetha1526/workmate',
+    repoNotice: 'GitHub: Swetha1526/workmate',
   },
 ];
 
@@ -85,7 +88,7 @@ export default function Projects() {
           </div>
           <h2 className="section-title">Production-Oriented Projects</h2>
           <p className="section-subtitle">
-            Full-stack systems and major capstone projects demonstrating robust architectures across Python, Django, React, Node.js, Express, MongoDB, and MySQL.
+            Full-stack systems and major capstone projects demonstrating robust architectures across MongoDB, Express, React, Node.js, Python, Django, and MySQL.
           </p>
         </div>
 

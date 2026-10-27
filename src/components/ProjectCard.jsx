@@ -44,10 +44,18 @@ export default function ProjectCard({ project }) {
             </h3>
             <div className="project-header-badges">
               {project.liveUrl && (
-                <span className="live-status-pill">
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="live-status-pill"
+                  title={`Open Live Demo for ${project.title}`}
+                  aria-label={`Open live demo of ${project.title} (opens in new tab)`}
+                >
                   <span className="live-dot" />
-                  <span>Live App</span>
-                </span>
+                  <span>Live Demo</span>
+                  <ExternalLink size={11} />
+                </a>
               )}
               {project.githubUrl && (
                 <a
@@ -55,10 +63,11 @@ export default function ProjectCard({ project }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="github-status-pill"
-                  title="View GitHub Repository"
+                  title={`View GitHub Repository for ${project.title}`}
+                  aria-label={`Open GitHub repository for ${project.title} (opens in new tab)`}
                 >
                   <GithubIcon size={12} />
-                  <span>Source Code</span>
+                  <span>GitHub</span>
                 </a>
               )}
             </div>

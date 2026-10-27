@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { Menu, X, ArrowUpRight, FileText } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import './Navbar.css';
 
@@ -93,7 +93,7 @@ export default function Navbar() {
           </div>
           <div className="brand-text-wrap">
             <span className="brand-name">Swetha B</span>
-            <span className="brand-role">Software Developer</span>
+            <span className="brand-role">MERN &amp; Full Stack Developer</span>
           </div>
         </a>
 
@@ -122,6 +122,17 @@ export default function Navbar() {
         {/* Desktop Action Area */}
         <div className="navbar-actions">
           <ThemeToggle />
+          <a
+            href="/B_Swetha_resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-secondary nav-resume-btn"
+            aria-label="View Resume in PDF format (opens in new tab)"
+            title="View & Download Resume PDF"
+          >
+            <FileText size={16} />
+            <span>Resume</span>
+          </a>
           <a href="#contact" className="btn btn-primary nav-cta-btn">
             <span>Get in Touch</span>
           </a>
@@ -192,6 +203,17 @@ export default function Navbar() {
               <span className="mobile-theme-label">Interface Theme</span>
               <ThemeToggle />
             </div>
+            <a
+              href="/B_Swetha_resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary mobile-resume-btn"
+              onClick={handleLinkClick}
+              aria-label="View Resume in PDF format"
+            >
+              <FileText size={16} />
+              <span>View Resume (PDF)</span>
+            </a>
             <a
               href="#contact"
               className="btn btn-primary mobile-cta-btn"

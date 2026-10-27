@@ -226,3 +226,9 @@
 .meta-badge svg {
   color: var(--accent-primary);
 }
+
+
+.channel-icon-wrap.resume-card-icon {
+  background: var(--accent-subtle);
+  color: var(--accent-primary);
+}

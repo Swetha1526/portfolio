@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, Mail } from 'lucide-react';
+import { ArrowUp, Mail, FileText } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './icons/SocialIcons';
 import './Footer.css';
 
@@ -23,7 +23,7 @@ export default function Footer() {
             <span className="footer-monogram">SB</span>
             <div className="footer-brand-text">
               <span className="footer-name">Swetha B</span>
-              <span className="footer-tag">Aspiring Python &amp; Full Stack Developer</span>
+              <span className="footer-tag">MERN Stack &amp; Full Stack Software Developer</span>
             </div>
           </div>
 
@@ -72,6 +72,17 @@ export default function Footer() {
             &copy; {currentYear} Swetha B. All rights reserved. B.E. Computer Science &amp; Engineering &bull; Class of 2027.
           </p>
           <div className="footer-meta-links">
+            <a
+              href="/B_Swetha_resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-repo-link"
+              title="View professional resume in PDF format"
+            >
+              <FileText size={14} />
+              <span>Resume (PDF)</span>
+            </a>
+            <span className="footer-meta-sep">&bull;</span>
             <a
               href="https://github.com/Swetha1526/portfolio"
               target="_blank"
