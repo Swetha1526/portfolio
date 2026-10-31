@@ -26,7 +26,7 @@ Targeted for **MERN Stack Developer** and **Full Stack Developer** internships a
     - [ConnectX](https://connect-x-xfpe.vercel.app/) ([GitHub](https://github.com/Swetha1526/ConnectX)) — Real-Time Social Media Platform (MERN + Socket.io)
     - [Workmate](https://workmate-brown.vercel.app/) ([GitHub](https://github.com/Swetha1526/workmate)) — Hourly Worker Hiring Platform (React.js, Vite.js, Node.js, MongoDB)
   - **Official Resume PDF**: Integrated `/resume/B_Swetha_Resume.pdf` across Header, Hero, and Footer with viewing and download options.
-  - **Direct Structured Email Form**: Delivers messages directly to swetha151105@gmail.com with field validation, honeypot spam protection, Gmail Web direct compose, and default mail client integration.
+  - **Interactive Contact Form**: Integrated with Formspree (https://formspree.io/f/mwllnyke) delivering structured inquiries directly to swetha151105@gmail.com with validation, honeypot spam protection, and loading states.
   - Verified internship at **Inetz Technologies**.
   - Interactive "View Technical Architecture" deep-dive accordions for recruiters.
   - One-click copy email button with clipboard state feedback & native mailto client integration.
