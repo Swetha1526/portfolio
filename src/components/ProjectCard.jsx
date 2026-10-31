@@ -64,7 +64,7 @@ export default function ProjectCard({ project }) {
                   title={`View ${project.title} GitHub Repository (opens in new tab)`}
                 >
                   <GithubIcon size={12} />
-                  <span>Source Code</span>
+                  <span>GitHub</span>
                 </a>
               )}
             </div>

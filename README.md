@@ -2,7 +2,7 @@
 
 Production-ready, premium personal portfolio website for **Swetha B**, a final-year B.E. Computer Science and Engineering student graduating in 2027 from Asan Memorial College of Engineering and Technology (Chengalpattu, Tamil Nadu).
 
-Targeted for **Python Developer** and **Full Stack Developer** internships and entry-level engineering roles.
+Targeted for **MERN Stack Developer** and **Full Stack Developer** internships and entry-level engineering roles.
 
 ---
 
@@ -50,34 +50,35 @@ swetha_portfolio/
 ├── dist/                     # Optimized static production build output
 ├── public/
 │   ├── favicon.svg           # Custom branded SB monogram favicon
+│   ├── B_Swetha_resume.pdf   # Prepared professional resume PDF
 │   └── projects/             # High-resolution project showcase mockups
 │       ├── apexmart.jpg      # GUVI Major Project 1 mockup
 │       ├── connectx.jpg      # GUVI Major Project 2 mockup
-│       ├── workmate.jpg
+│       ├── workmate.jpg      # Major Project 3 mockup
 │       └── resume_analyzer.jpg
 ├── src/
 │   ├── assets/               # Brand assets
 │   ├── components/
 │   │   ├── icons/            # SVG icons (GitHub, LinkedIn)
-│   │   ├── About.jsx         # Academic background & narrative
+│   │   ├── About.jsx         # Academic background, MERN focus & resume link
 │   │   ├── About.css
-│   │   ├── Contact.jsx       # Real email copy & profile links
+│   │   ├── Contact.jsx       # Email copy, profile links & resume card
 │   │   ├── Contact.css
 │   │   ├── Education.jsx     # B.E. CSE degree, CGPA, & coursework
 │   │   ├── Education.css
-│   │   ├── ExperienceTimeline.jsx # Inetz Technologies & GUVI/QSpiders
+│   │   ├── ExperienceTimeline.jsx # Quantified internship impact & training
 │   │   ├── ExperienceTimeline.css
-│   │   ├── Footer.jsx        # Dynamic year & back-to-top button
+│   │   ├── Footer.jsx        # Dynamic year, back-to-top & resume link
 │   │   ├── Footer.css
-│   │   ├── Hero.jsx          # Live availability beacon & developer card
+│   │   ├── Hero.jsx          # Live availability beacon, MERN headline & terminal card
 │   │   ├── Hero.css
-│   │   ├── Navbar.jsx        # Desktop nav & mobile drawer
+│   │   ├── Navbar.jsx        # Desktop nav, mobile drawer & resume action
 │   │   ├── Navbar.css
 │   │   ├── ProjectCard.jsx   # Project showcase & architecture expander
 │   │   ├── ProjectCard.css
 │   │   ├── Projects.jsx      # Major Projects: ApexMart, ConnectX & Workmate
 │   │   ├── Projects.css
-│   │   ├── Skills.jsx        # Categorized tech inventory with filters
+│   │   ├── Skills.jsx        # Categorized tech inventory with filters & soft skills
 │   │   ├── Skills.css
 │   │   ├── ThemeToggle.jsx   # Accessible dark/light toggle button
 │   │   └── ThemeToggle.css

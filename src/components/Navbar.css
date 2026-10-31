@@ -374,3 +374,28 @@
 .mobile-cta-btn {
   width: 100%;
 }
+
+
+.nav-resume-btn {
+  display: none;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  min-height: 40px;
+}
+
+@media (min-width: 768px) {
+  .nav-resume-btn {
+    display: inline-flex;
+  }
+}
+
+.mobile-resume-btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 44px;
+}

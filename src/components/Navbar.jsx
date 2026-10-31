@@ -93,7 +93,7 @@ export default function Navbar() {
           </div>
           <div className="brand-text-wrap">
             <span className="brand-name">Swetha B</span>
-            <span className="brand-role">Software Developer</span>
+            <span className="brand-role">MERN &amp; Full Stack Developer</span>
           </div>
         </a>
 

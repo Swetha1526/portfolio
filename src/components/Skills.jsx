@@ -5,7 +5,7 @@ import './Skills.css';
 const SKILL_CATEGORIES = [
   {
     id: 'frontend',
-    title: 'Frontend Development',
+    title: 'Frontend & UI Engineering',
     icon: <Layout size={20} />,
     description: 'Component architecture, responsive layouts, modern state management, and client performance tooling.',
     skills: ['HTML5', 'CSS3', 'JavaScript', 'React.js', 'React 19', 'Redux', 'Redux Toolkit', 'Vite.js', 'Tailwind CSS'],
@@ -19,7 +19,7 @@ const SKILL_CATEGORIES = [
   },
   {
     id: 'databases',
-    title: 'Databases & Storage',
+    title: 'Databases & Data Modeling',
     icon: <Database size={20} />,
     description: 'NoSQL document storage, schema modeling with Mongoose, relational data querying, and persistence.',
     skills: ['MongoDB', 'Mongoose', 'MySQL'],
@@ -33,7 +33,7 @@ const SKILL_CATEGORIES = [
   },
   {
     id: 'tools',
-    title: 'Developer Tools',
+    title: 'Developer Tools & Version Control',
     icon: <Wrench size={20} />,
     description: 'Version control workflows, API testing environments, development editors, and cloud deployment.',
     skills: ['Git', 'GitHub', 'VS Code', 'Postman'],
@@ -67,7 +67,7 @@ export default function Skills() {
           </div>
           <h2 className="section-title">Core Skills &amp; Technologies</h2>
           <p className="section-subtitle">
-            A verified inventory of technologies utilized in coursework, internships, and full stack projects.
+            A verified inventory of technologies, frameworks, developer tools, and professional strengths utilized in coursework, internships, and production projects.
           </p>
         </div>
 
@@ -95,7 +95,7 @@ export default function Skills() {
                 <div className="cat-icon-badge">{cat.icon}</div>
                 <div>
                   <h3 className="cat-title">{cat.title}</h3>
-                  <span className="cat-count">{cat.skills.length} technologies</span>
+                  <span className="cat-count">{cat.skills.length} skills &amp; competencies</span>
                 </div>
               </div>
 

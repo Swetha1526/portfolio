@@ -120,7 +120,11 @@
 }
 
 .hero-btn {
-  padding: 0.875rem 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
   font-size: 0.9375rem;
 }
 
