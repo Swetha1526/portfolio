@@ -23,7 +23,7 @@ export default function Footer() {
             <span className="footer-monogram">SB</span>
             <div className="footer-brand-text">
               <span className="footer-name">Swetha B</span>
-              <span className="footer-tag">Aspiring Python &amp; Full Stack Developer</span>
+              <span className="footer-tag">MERN Stack &amp; Full Stack Developer</span>
             </div>
           </div>
 
@@ -72,6 +72,25 @@ export default function Footer() {
             &copy; {currentYear} Swetha B. All rights reserved. B.E. Computer Science &amp; Engineering &bull; Class of 2027.
           </p>
           <div className="footer-meta-links">
+            <a
+              href="/resume/B_Swetha_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-repo-link"
+              title="Open Resume PDF in new tab"
+            >
+              <span>View Resume</span>
+            </a>
+            <span className="footer-meta-sep">&bull;</span>
+            <a
+              href="/resume/B_Swetha_Resume.pdf"
+              download="B_Swetha_Resume.pdf"
+              className="footer-repo-link"
+              title="Download Resume PDF"
+            >
+              <span>Download CV</span>
+            </a>
+            <span className="footer-meta-sep">&bull;</span>
             <a
               href="https://github.com/Swetha1526/portfolio"
               target="_blank"

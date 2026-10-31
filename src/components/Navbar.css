@@ -151,6 +151,21 @@
   gap: 0.75rem;
 }
 
+.nav-resume-btn {
+  display: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  min-height: 40px;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+@media (min-width: 640px) {
+  .nav-resume-btn {
+    display: inline-flex;
+  }
+}
+
 .nav-cta-btn {
   display: none;
   padding: 0.5rem 1.15rem;

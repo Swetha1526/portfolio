@@ -1,4 +1,4 @@
-import { ArrowDown, Mail, Terminal } from 'lucide-react';
+import { ArrowDown, Mail, FileText, Terminal } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './icons/SocialIcons';
 import './Hero.css';
 
@@ -15,7 +15,7 @@ export default function Hero() {
               <span className="beacon-dot" />
             </span>
             <span className="status-text">
-              Available for Python &amp; Full Stack Internships (2027 Grad)
+              Available for Full Stack &amp; MERN Opportunities (2027 Grad)
             </span>
           </div>
 
@@ -25,14 +25,13 @@ export default function Hero() {
           </h1>
 
           <p className="hero-headline">
-            Full Stack Developer in progress &amp; aspiring Python Engineer
+            MERN Stack Developer &amp; Full-Stack Web Engineer
           </p>
 
           <p className="hero-description">
             Final-year B.E. Computer Science and Engineering student graduating in 2027.
-            Passionate about architecting clean backend workflows in Python &amp; Django,
-            designing modern web applications with React, and turning real-world needs
-            into reliable software solutions.
+            Hands-on experience architecting full-stack web applications using React.js,
+            Node.js, Express.js, and MongoDB, alongside backend services with Python &amp; Django.
           </p>
 
           {/* Action CTAs */}
@@ -41,7 +40,17 @@ export default function Hero() {
               <span>Explore Projects</span>
               <ArrowDown size={18} />
             </a>
-            <a href="#contact" className="btn btn-secondary hero-btn">
+            <a
+              href="/resume/B_Swetha_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary hero-btn"
+              title="View & Download Resume (opens in new tab)"
+            >
+              <span>View Resume</span>
+              <FileText size={18} />
+            </a>
+            <a href="#contact" className="btn btn-ghost hero-btn">
               <span>Contact Me</span>
               <Mail size={18} />
             </a>
@@ -127,10 +136,10 @@ export default function Hero() {
               </div>
               <div className="code-line indent-1">
                 <span className="c-var">focus</span> = [
-                <span className="c-str">&quot;Python&quot;</span>,{' '}
-                <span className="c-str">&quot;Django&quot;</span>,{' '}
-                <span className="c-str">&quot;React&quot;</span>,{' '}
-                <span className="c-str">&quot;Node.js&quot;</span>]
+                <span className="c-str">&quot;React 19&quot;</span>,{' '}
+                <span className="c-str">&quot;Node.js&quot;</span>,{' '}
+                <span className="c-str">&quot;Express.js&quot;</span>,{' '}
+                <span className="c-str">&quot;MongoDB&quot;</span>]
               </div>
               <div className="code-line indent-1">
                 <span className="c-var">portfolio_repo</span> ={' '}
@@ -146,7 +155,7 @@ export default function Hero() {
               </div>
               <div className="code-line indent-1">
                 <span className="c-var">status</span> ={' '}
-                <span className="c-str">&quot;Ready for Internships &amp; Entry Roles&quot;</span>
+                <span className="c-str">&quot;Ready for MERN &amp; Full Stack Roles&quot;</span>
               </div>
             </div>
 

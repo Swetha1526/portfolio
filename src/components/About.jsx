@@ -70,12 +70,12 @@ export default function About() {
             <p className="about-narrative-paragraph">
               My engineering focus centers on developing reliable, end-to-end applications. Through hands-on
               implementation, I have architected full-stack systems including Major Projects—<em>ApexMart</em> (e-commerce
-              platform built with Django REST Framework, MySQL, and React/Redux), <em>ConnectX</em> (real-time social
-              network with MERN &amp; Socket.io), and <em>Workmate</em> (hourly worker hiring platform built with React, Node.js, and MongoDB).
+              platform built with React 19, Redux, Node.js, Express.js, and MongoDB), <em>ConnectX</em> (real-time social
+              network with MERN &amp; Socket.io), and <em>Workmate</em> (hourly worker hiring platform built with React.js, Vite.js, Node.js, and MongoDB).
             </p>
             <p className="about-narrative-paragraph">
-              I am seeking <strong>Python Developer</strong> and <strong>Full Stack Developer</strong> internship
-              and entry-level opportunities where I can apply my development skills, collaborate with experienced
+              I am seeking <strong>MERN Stack Developer</strong> and <strong>Full Stack Developer</strong> roles and
+              internship opportunities where I can apply my development skills, collaborate with experienced
               engineers, and contribute to production codebases.
             </p>
 

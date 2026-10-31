@@ -1,42 +1,42 @@
 import React, { useState } from 'react';
-import { Code, Layout, Server, Database, Wrench, Layers } from 'lucide-react';
+import { Layout, Server, Database, Zap, Wrench, Layers } from 'lucide-react';
 import './Skills.css';
 
 const SKILL_CATEGORIES = [
   {
-    id: 'programming',
-    title: 'Programming Languages',
-    icon: <Code size={20} />,
-    description: 'Core languages utilized for algorithmic problem solving, backend engineering, data querying, and scripting.',
-    skills: ['Python', 'C', 'SQL'],
-  },
-  {
     id: 'frontend',
     title: 'Frontend Development',
     icon: <Layout size={20} />,
-    description: 'Component architecture, semantic markup, responsive design, JavaScript programming, and modern client tooling.',
-    skills: ['JavaScript', 'React.js', 'HTML', 'CSS', 'Vite.js'],
+    description: 'Component architecture, responsive layouts, modern state management, and client performance tooling.',
+    skills: ['HTML5', 'CSS3', 'JavaScript', 'React.js', 'React 19', 'Redux', 'Redux Toolkit', 'Vite.js', 'Tailwind CSS'],
   },
   {
     id: 'backend',
-    title: 'Backend Frameworks',
+    title: 'Backend & APIs',
     icon: <Server size={20} />,
-    description: 'Server-side application logic, RESTful API design, routing, and controller architectures.',
-    skills: ['Django', 'Flask', 'Node.js'],
+    description: 'Server-side application logic, middleware, RESTful API development, JWT authentication, and backend services.',
+    skills: ['Node.js', 'Express.js', 'Python', 'Django REST Framework', 'REST APIs'],
   },
   {
     id: 'databases',
     title: 'Databases & Storage',
     icon: <Database size={20} />,
-    description: 'Relational schema design, queries, and document-oriented data persistence.',
-    skills: ['MySQL', 'SQLite', 'MongoDB'],
+    description: 'NoSQL document storage, schema modeling with Mongoose, relational data querying, and persistence.',
+    skills: ['MongoDB', 'Mongoose', 'MySQL'],
+  },
+  {
+    id: 'realtime',
+    title: 'Real-Time Technologies',
+    icon: <Zap size={20} />,
+    description: 'Bidirectional client-server communication, event-driven socket handling, and low-latency data sync.',
+    skills: ['Socket.io', 'WebSockets'],
   },
   {
     id: 'tools',
     title: 'Developer Tools',
     icon: <Wrench size={20} />,
-    description: 'Version control workflows, repository hosting, and code editing environments.',
-    skills: ['Git', 'GitHub', 'Visual Studio Code'],
+    description: 'Version control workflows, API testing environments, development editors, and cloud deployment.',
+    skills: ['Git', 'GitHub', 'VS Code', 'Postman'],
   },
 ];
 
@@ -45,10 +45,10 @@ export default function Skills() {
 
   const filterOptions = [
     { id: 'all', label: 'All Technologies' },
-    { id: 'programming', label: 'Programming' },
     { id: 'frontend', label: 'Frontend' },
-    { id: 'backend', label: 'Backend' },
+    { id: 'backend', label: 'Backend & APIs' },
     { id: 'databases', label: 'Databases' },
+    { id: 'realtime', label: 'Real-Time' },
     { id: 'tools', label: 'Tools' },
   ];
 

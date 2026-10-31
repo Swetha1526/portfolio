@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { Menu, X, ArrowUpRight, FileText } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import './Navbar.css';
 
@@ -122,6 +122,16 @@ export default function Navbar() {
         {/* Desktop Action Area */}
         <div className="navbar-actions">
           <ThemeToggle />
+          <a
+            href="/resume/B_Swetha_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-secondary nav-resume-btn"
+            title="View Swetha's Resume (opens in new tab)"
+          >
+            <FileText size={15} />
+            <span>Resume</span>
+          </a>
           <a href="#contact" className="btn btn-primary nav-cta-btn">
             <span>Get in Touch</span>
           </a>
@@ -185,6 +195,18 @@ export default function Navbar() {
                 </li>
               );
             })}
+            <li className="mobile-nav-item">
+              <a
+                href="/resume/B_Swetha_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mobile-nav-link"
+                onClick={handleLinkClick}
+              >
+                <span>Resume / CV (PDF)</span>
+                <ArrowUpRight size={18} className="mobile-nav-arrow" />
+              </a>
+            </li>
           </ul>
 
           <div className="mobile-drawer-footer">
@@ -192,6 +214,14 @@ export default function Navbar() {
               <span className="mobile-theme-label">Interface Theme</span>
               <ThemeToggle />
             </div>
+            <a
+              href="/resume/B_Swetha_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary mobile-cta-btn"
+            >
+              View Resume (PDF)
+            </a>
             <a
               href="#contact"
               className="btn btn-primary mobile-cta-btn"
