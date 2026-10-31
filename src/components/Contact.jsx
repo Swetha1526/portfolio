@@ -126,10 +126,12 @@ export default function Contact() {
           Accept: 'application/json',
         },
         body: JSON.stringify({
-          name: formData.name.trim(),
-          email: formData.email.trim(),
-          subject: formData.subject.trim(),
-          message: formData.message.trim(),
+          'Full Name': formData.name.trim(),
+          'Email Address': formData.email.trim(),
+          'Subject': formData.subject.trim(),
+          'Message': formData.message.trim(),
+          _replyto: formData.email.trim(),
+          _subject: `[Portfolio Inquiry] ${formData.subject.trim()} — ${formData.name.trim()}`,
         }),
       });
 
