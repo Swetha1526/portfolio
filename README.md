@@ -26,7 +26,7 @@ Targeted for **MERN Stack Developer** and **Full Stack Developer** internships a
     - [ConnectX](https://connect-x-xfpe.vercel.app/) ([GitHub](https://github.com/Swetha1526/ConnectX)) — Real-Time Social Media Platform (MERN + Socket.io)
     - [Workmate](https://workmate-brown.vercel.app/) ([GitHub](https://github.com/Swetha1526/workmate)) — Hourly Worker Hiring Platform (React.js, Vite.js, Node.js, MongoDB)
   - **Official Resume PDF**: Integrated `/resume/B_Swetha_Resume.pdf` across Header, Hero, and Footer with viewing and download options.
-  - **Interactive Contact Form**: Integrated with Formspree (`VITE_FORMSPREE_ENDPOINT`) with field validation, honeypot spam protection, loading state, and status notifications.
+  - **Direct Structured Email Form**: Delivers messages directly to swetha151105@gmail.com with field validation, honeypot spam protection, Gmail Web direct compose, and default mail client integration.
   - Verified internship at **Inetz Technologies**.
   - Interactive "View Technical Architecture" deep-dive accordions for recruiters.
   - One-click copy email button with clipboard state feedback & native mailto client integration.
@@ -135,15 +135,6 @@ npm run preview
 ## 🌐 Deployment Instructions
 
 The project is pre-configured for instant zero-configuration deployment to **Vercel** or **Netlify**.
-
-### Environment Variables
-For the contact form to deliver messages directly to your inbox via Formspree:
-1. Create a free form at [https://formspree.io](https://formspree.io).
-2. Set the environment variable in Vercel (or create a `.env` file locally):
-   ```
-   VITE_FORMSPREE_ENDPOINT=https://formspree.io/f/your_form_id
-   ```
-3. If not configured, the contact form will informatively show configuration instructions and direct users to email directly.
 
 ### Deploy to Vercel
 1. Install the Vercel CLI (`npm i -g vercel`) or push the repository to GitHub.

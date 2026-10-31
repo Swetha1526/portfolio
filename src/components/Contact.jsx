@@ -8,17 +8,16 @@ import {
   Send,
   ArrowUpRight,
   MessageSquare,
-  Loader2,
-  AlertCircle,
-  AlertTriangle,
   CheckCircle2,
   RotateCcw,
+  ExternalLink,
 } from 'lucide-react';
 import { LinkedinIcon, GithubIcon } from './icons/SocialIcons';
 import './Contact.css';
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
+  const [copiedStructured, setCopiedStructured] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -27,8 +26,8 @@ export default function Contact() {
     _gotcha: '',
   });
   const [errors, setErrors] = useState({});
-  const [submitStatus, setSubmitStatus] = useState('idle'); // 'idle' | 'loading' | 'success' | 'error' | 'unconfigured'
-  const [errorMessage, setErrorMessage] = useState('');
+  const [submitStatus, setSubmitStatus] = useState('idle'); // 'idle' | 'success'
+  const [sentPayload, setSentPayload] = useState(null);
 
   const emailAddress = 'swetha151105@gmail.com';
   const linkedInUrl = 'https://www.linkedin.com/in/swetha-baskar-5599963a8/';
@@ -52,6 +51,27 @@ export default function Contact() {
       }
     } catch (err) {
       console.error('Failed to copy email:', err);
+    }
+  };
+
+  const handleCopyStructured = async () => {
+    if (!sentPayload) return;
+    try {
+      const textToCopy = `Full Name: ${sentPayload.name}\nEmail Address: ${sentPayload.email}\nSubject: ${sentPayload.subject}\n\nMessage:\n${sentPayload.message}`;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(textToCopy);
+      } else {
+        const textarea = document.createElement('textarea');
+        textarea.value = textToCopy;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+      }
+      setCopiedStructured(true);
+      setTimeout(() => setCopiedStructured(false), 2500);
+    } catch (err) {
+      console.error('Failed to copy structured message:', err);
     }
   };
 
@@ -94,7 +114,7 @@ export default function Contact() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!validate()) {
@@ -107,60 +127,55 @@ export default function Contact() {
       return;
     }
 
-    const endpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT;
+    const payload = {
+      name: formData.name.trim(),
+      email: formData.email.trim(),
+      subject: formData.subject.trim(),
+      message: formData.message.trim(),
+    };
 
-    // Check if endpoint is not configured
-    if (!endpoint || endpoint.trim() === '' || endpoint.includes('your_form_id')) {
-      setSubmitStatus('unconfigured');
-      return;
-    }
+    setSentPayload(payload);
+    setSubmitStatus('success');
 
-    setSubmitStatus('loading');
-    setErrorMessage('');
+    // Build structured email body
+    const formattedSubject = `[Portfolio Inquiry] ${payload.subject} — ${payload.name}`;
+    const formattedBody =
+`Full Name: ${payload.name}
+Email Address: ${payload.email}
+Subject: ${payload.subject}
 
-    try {
-      const response = await fetch(endpoint.trim(), {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
-        body: JSON.stringify({
-          'Full Name': formData.name.trim(),
-          'Email Address': formData.email.trim(),
-          'Subject': formData.subject.trim(),
-          'Message': formData.message.trim(),
-          _replyto: formData.email.trim(),
-          _subject: `[Portfolio Inquiry] ${formData.subject.trim()} — ${formData.name.trim()}`,
-        }),
-      });
+Message:
+${payload.message}`;
 
-      if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: '',
-          _gotcha: '',
-        });
-        setErrors({});
-      } else {
-        const data = await response.json().catch(() => ({}));
-        setSubmitStatus('error');
-        setErrorMessage(
-          data?.errors?.[0]?.message ||
-            'Unable to deliver your message at this time. Please try again or reach out directly at swetha151105@gmail.com.'
-        );
-      }
-    } catch (err) {
-      console.error('Contact form submission error:', err);
-      setSubmitStatus('error');
-      setErrorMessage(
-        'A network connection error occurred while submitting your message. Please reach out directly at swetha151105@gmail.com.'
-      );
-    }
+    const mailtoUrl = `mailto:${emailAddress}?subject=${encodeURIComponent(formattedSubject)}&body=${encodeURIComponent(formattedBody)}`;
+
+    // Trigger default mail client
+    window.location.href = mailtoUrl;
   };
+
+  const handleReset = () => {
+    setSubmitStatus('idle');
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+      _gotcha: '',
+    });
+    setErrors({});
+    setSentPayload(null);
+  };
+
+  // Structured URLs for success state
+  const formattedSubject = sentPayload
+    ? `[Portfolio Inquiry] ${sentPayload.subject} — ${sentPayload.name}`
+    : '';
+  const formattedBody = sentPayload
+    ? `Full Name: ${sentPayload.name}\nEmail Address: ${sentPayload.email}\nSubject: ${sentPayload.subject}\n\nMessage:\n${sentPayload.message}`
+    : '';
+
+  const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(formattedSubject)}&body=${encodeURIComponent(formattedBody)}`;
+  const gmailWebLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(emailAddress)}&su=${encodeURIComponent(formattedSubject)}&body=${encodeURIComponent(formattedBody)}`;
 
   return (
     <section id="contact" className="section contact-section" aria-label="Contact Swetha B">
@@ -184,66 +199,96 @@ export default function Contact() {
               <div className="contact-form-header">
                 <h3 className="contact-form-title">Send a Direct Message</h3>
                 <p className="contact-form-desc">
-                  Have an internship or developer role, project collaboration, or question? Send a message directly.
+                  Have an internship or developer role, project collaboration, or question? Send a structured message directly to{' '}
+                  <strong className="text-highlight">{emailAddress}</strong>.
                 </p>
               </div>
 
-              {submitStatus === 'unconfigured' && (
-                <div className="contact-alert alert-warning" role="alert">
-                  <AlertTriangle size={20} className="alert-icon" />
-                  <div className="alert-body">
-                    <strong className="alert-heading">Form Endpoint Not Configured</strong>
-                    <p className="alert-text">
-                      The contact form endpoint is not yet configured. To enable direct inbox delivery via Formspree, set the <code>VITE_FORMSPREE_ENDPOINT</code> environment variable in your Vercel project settings or <code>.env</code> file with your Formspree endpoint (e.g., <code>https://formspree.io/f/your_form_id</code>). You can also email Swetha directly at{' '}
-                      <a href={`mailto:${emailAddress}`} className="alert-link">
-                        {emailAddress}
-                      </a>.
-                    </p>
-                    <button
-                      type="button"
-                      onClick={() => setSubmitStatus('idle')}
-                      className="btn btn-secondary alert-dismiss-btn"
-                    >
-                      Dismiss
-                    </button>
+              {submitStatus === 'success' && sentPayload && (
+                <div className="contact-success-panel" role="status">
+                  <div className="success-header-row">
+                    <CheckCircle2 size={24} className="text-success" />
+                    <div>
+                      <strong className="success-title">Message Ready for Delivery!</strong>
+                      <p className="success-subtitle">
+                        Your message has been structured and addressed directly to <strong>{emailAddress}</strong>.
+                      </p>
+                    </div>
                   </div>
-                </div>
-              )}
 
-              {submitStatus === 'success' && (
-                <div className="contact-alert alert-success" role="alert">
-                  <CheckCircle2 size={20} className="alert-icon" />
-                  <div className="alert-body">
-                    <strong className="alert-heading">Message Sent Successfully!</strong>
-                    <p className="alert-text">
-                      Thank you for reaching out! Your message has been dispatched to Swetha&apos;s inbox. She will respond as soon as possible.
-                    </p>
-                    <button
-                      type="button"
-                      onClick={() => setSubmitStatus('idle')}
-                      className="btn btn-secondary alert-dismiss-btn"
-                    >
-                      <RotateCcw size={14} />
-                      <span>Send Another Message</span>
-                    </button>
+                  {/* Structured Summary Preview */}
+                  <div className="structured-summary-box">
+                    <div className="summary-row">
+                      <span className="summary-label">To:</span>
+                      <span className="summary-value highlight-email">{emailAddress}</span>
+                    </div>
+                    <div className="summary-row">
+                      <span className="summary-label">Full Name:</span>
+                      <span className="summary-value">{sentPayload.name}</span>
+                    </div>
+                    <div className="summary-row">
+                      <span className="summary-label">Email:</span>
+                      <span className="summary-value">{sentPayload.email}</span>
+                    </div>
+                    <div className="summary-row">
+                      <span className="summary-label">Subject:</span>
+                      <span className="summary-value">{sentPayload.subject}</span>
+                    </div>
+                    <div className="summary-row summary-message-row">
+                      <span className="summary-label">Message:</span>
+                      <p className="summary-message-text">{sentPayload.message}</p>
+                    </div>
                   </div>
-                </div>
-              )}
 
-              {submitStatus === 'error' && (
-                <div className="contact-alert alert-error" role="alert">
-                  <AlertCircle size={20} className="alert-icon" />
-                  <div className="alert-body">
-                    <strong className="alert-heading">Message Delivery Issue</strong>
-                    <p className="alert-text">{errorMessage}</p>
+                  {/* Dispatch Actions */}
+                  <div className="success-actions-grid">
+                    <a
+                      href={gmailWebLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-primary dispatch-btn"
+                      title="Open in Gmail with prefilled message"
+                    >
+                      <ExternalLink size={16} />
+                      <span>Open in Gmail Web</span>
+                    </a>
+
+                    <a
+                      href={mailtoLink}
+                      className="btn btn-secondary dispatch-btn"
+                      title="Open default email application"
+                    >
+                      <Mail size={16} />
+                      <span>Open Mail Client</span>
+                    </a>
+
                     <button
                       type="button"
-                      onClick={() => setSubmitStatus('idle')}
-                      className="btn btn-secondary alert-dismiss-btn"
+                      onClick={handleCopyStructured}
+                      className="btn btn-secondary dispatch-btn"
                     >
-                      Try Again
+                      {copiedStructured ? (
+                        <>
+                          <Check size={16} className="text-success" />
+                          <span>Copied Message!</span>
+                        </>
+                      ) : (
+                        <>
+                          <Copy size={16} />
+                          <span>Copy Text</span>
+                        </>
+                      )}
                     </button>
                   </div>
+
+                  <button
+                    type="button"
+                    onClick={handleReset}
+                    className="btn btn-ghost reset-form-btn"
+                  >
+                    <RotateCcw size={15} />
+                    <span>Send Another Message</span>
+                  </button>
                 </div>
               )}
 
@@ -277,7 +322,6 @@ export default function Contact() {
                         className={`form-input ${errors.name ? 'has-error' : ''}`}
                         aria-invalid={Boolean(errors.name)}
                         aria-describedby={errors.name ? 'contact-name-error' : undefined}
-                        disabled={submitStatus === 'loading'}
                         required
                       />
                       {errors.name && (
@@ -302,7 +346,6 @@ export default function Contact() {
                         className={`form-input ${errors.email ? 'has-error' : ''}`}
                         aria-invalid={Boolean(errors.email)}
                         aria-describedby={errors.email ? 'contact-email-error' : undefined}
-                        disabled={submitStatus === 'loading'}
                         required
                       />
                       {errors.email && (
@@ -328,7 +371,6 @@ export default function Contact() {
                       className={`form-input ${errors.subject ? 'has-error' : ''}`}
                       aria-invalid={Boolean(errors.subject)}
                       aria-describedby={errors.subject ? 'contact-subject-error' : undefined}
-                      disabled={submitStatus === 'loading'}
                       required
                     />
                     {errors.subject && (
@@ -353,7 +395,6 @@ export default function Contact() {
                       className={`form-textarea ${errors.message ? 'has-error' : ''}`}
                       aria-invalid={Boolean(errors.message)}
                       aria-describedby={errors.message ? 'contact-message-error' : undefined}
-                      disabled={submitStatus === 'loading'}
                       required
                     />
                     {errors.message && (
@@ -366,19 +407,9 @@ export default function Contact() {
                   <button
                     type="submit"
                     className="btn btn-primary form-submit-btn"
-                    disabled={submitStatus === 'loading'}
                   >
-                    {submitStatus === 'loading' ? (
-                      <>
-                        <Loader2 size={18} className="spin-icon" />
-                        <span>Sending Message...</span>
-                      </>
-                    ) : (
-                      <>
-                        <Send size={18} />
-                        <span>Send Message</span>
-                      </>
-                    )}
+                    <Send size={18} />
+                    <span>Send Message</span>
                   </button>
                 </form>
               )}
