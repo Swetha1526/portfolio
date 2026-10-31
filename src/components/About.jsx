@@ -101,7 +101,7 @@ export default function About() {
             {/* Resume Callout Action */}
             <div className="about-resume-cta">
               <a
-                href="/B_Swetha_resume.pdf"
+                href="/resume/B_Swetha_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary about-resume-btn"

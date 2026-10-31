@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, Mail, FileText } from 'lucide-react';
+import { ArrowUp, Mail } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './icons/SocialIcons';
 import './Footer.css';
 
